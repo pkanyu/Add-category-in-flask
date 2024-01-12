@@ -8,3 +8,4 @@
 + flask
 ## Running it
 >Run it on a flask server in your terminal.
+>It would also be helpful to familiarize with the different extension-paths making it easy to access the different end-points.
