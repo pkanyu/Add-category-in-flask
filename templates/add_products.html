@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>Add a Product</h1>
+    <form action="/vendor/add_product" method="POST">
+        <label for="product_name" class="form__input">Product Name:</label>
+        <input type="text" name="product_name" class="form__input" required><br>
+        <label class="form__input" for="category">Category:</label>
+        <select class="form__input" name="category">
+            {% for category in categories %}
+                <option value="{{ category }}">{{ category }}</option>
+            {% endfor %}
+        </select><br>
+        <button class="btn" type="submit">Add Product</button>
+    </form>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

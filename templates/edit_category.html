@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+</head>
+<body>
+    <h1>Edit Category</h1>
+    <form action="/admin/edit_category/{{category[0]}}" method="POST">
+        <label  class="form__input" for="new_name">New Category Name:</label>
+        <input type="text" class="form__input" name="new_name" value="{{ category[1] }}" required><br>
+        <button class="btn" type="submit">Save Changes</button>
+    </form>
+    <ul>
+        <li><a href="/admin/add_category">Add Category</a></li>
+        <li><a href=" /admin/edit_category/{{category[0]}}">Edit Category</a></li>
+        <li>
+            <form action=" /admin/delete_category/{{category[0]}}" method="POST">
+                <button class="btn" type="submit">Delete Category</button>
+            </form>
+        </li>
+    </ul>
+    
+
+</body>
+</html>
