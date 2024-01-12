@@ -7,4 +7,4 @@
 + javascript
 + flask
 ## Running it
->To run it on a flask server on your terminal.
+>Run it on a flask server in your terminal.
